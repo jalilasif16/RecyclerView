@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="6dp"
+        android:background="@drawable/item_bg"
+        android:elevation="6dp"
+        app:cardBackgroundColor="?android:attr/colorPressedHighlight"
+        app:cardCornerRadius="8dp"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="6dp"
+            android:padding="4dp"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/symbol"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_width="3dp"
+                app:civ_border_color="@color/teal_700"
+                android:elevation="4dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description"
+                    android:layout_below="@id/title"
+                    android:textColor="#FF1100"
+                    android:textSize="18sp"
+                    />
+
+
+                <ImageButton
+                    android:id="@+id/list_item_delete_button"
+                    android:layout_width="50dp"
+                    android:layout_margin="6dp"
+                    android:layout_alignEnd="@+id/description"
+                    android:src="@drawable/ic_delete"
+                    android:background="?selectableItemBackground"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/todo" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
